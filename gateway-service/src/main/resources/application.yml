@@ -1,0 +1,23 @@
+
+# the following is a static routing configuration
+# you won't need it once you have a functional discovery service (Eureka Server)
+# this type of configuration isn't usable in prod with a ridiculous amount of microservices
+# and with dynamic ip addresses.
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id : r1
+#          uri : http://localhost:8081/
+#          predicates:
+#            - Path=/customers/**
+#        - id: r2
+#          uri: http://localhost:8082/
+#          predicates:
+#            - Path=/accounts/**
+spring:
+  application:
+    name: gateways-service
+
+server:
+  port: 8888
